@@ -1,5 +1,7 @@
 module HackerRankStudies
   module ProblemSolving
+    # Problem description
+    # https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true
     class BirthdayCakeCandles
       def initialize(array)
         @array = array
