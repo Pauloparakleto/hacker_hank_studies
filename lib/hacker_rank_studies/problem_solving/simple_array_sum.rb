@@ -1,13 +1,15 @@
 module HackerRankStudies
-    module ProblemSolving
-        class SimpleArraySum
-            def initialize(array)
-                @array = array
-            end
+  module ProblemSolving
+    # Problem description
+    # https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=true
+    class SimpleArraySum
+      def initialize(array)
+        @array = array
+      end
 
-            def sum
-                @array.sum
-            end
-        end
+      def sum
+        @array.sum
+      end
     end
+  end
 end
