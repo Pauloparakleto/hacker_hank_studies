@@ -14,9 +14,15 @@ module HackerRankStudies
             def compare
                 first_scores.each_with_index do |score, index|
                     if score > second_scores[index]
+                        scores[0] += 1
+                    end
 
+                    if score < second_scores[index]
+                        scores[1] += 1
                     end
                 end
+                
+                scores
             end
         end
     end
