@@ -11,32 +11,32 @@ RSpec.describe HackerRankStudies::ProblemSolving::CompareTriplets do
         end
     end
 
-    describe '#first_score' do
-        it 'is alice_score' do
-            alice_score = [4, 6, 7]
-            bob_score = [3, 6, 10]
+    describe '#first_scores' do
+        it 'is alice_scores' do
+            alice_scores = [4, 6, 7]
+            bob_scores = [3, 6, 10]
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_score, bob_score).first_score
-            expect(result).to eq(alice_score)
+            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).first_scores
+            expect(result).to eq(alice_scores)
         end
     end
 
-    describe '#second_score' do
-        it 'is bob_score' do
-            alice_score = [4, 6, 7]
-            bob_score = [3, 6, 10]
+    describe '#second_scores' do
+        it 'is bob_scores' do
+            alice_scores = [4, 6, 7]
+            bob_scores = [3, 6, 10]
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_score, bob_score).second_score
-            expect(result).to eq(bob_score)
+            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).second_scores
+            expect(result).to eq(bob_scores)
         end
     end
 
-    describe '#score' do
+    describe '#scores' do
         it 'is [0, 0]' do
-            alice_score = [4, 6, 7]
-            bob_score = [3, 6, 10]
+            alice_scores = [4, 6, 7]
+            bob_scores = [3, 6, 10]
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_score, bob_score).score
+            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).scores
             expect(result).to eq([0, 0])
         end
     end
@@ -44,10 +44,10 @@ RSpec.describe HackerRankStudies::ProblemSolving::CompareTriplets do
 
     describe 'compare' do
         it 'is [1, 1]' do
-            alice_score = [4, 6, 7]
-            bob_score = [3, 6, 10]
+            alice_scores = [4, 6, 7]
+            bob_scores = [3, 6, 10]
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_score, bob_score).compare
+            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).compare
             
             expect(result).to eq([1, 1])
         end
