@@ -10,3 +10,8 @@ gem 'rake', '~> 13.0'
 gem 'rspec', '~> 3.0'
 
 gem 'rubocop', '~> 1.7'
+<<<<<<< HEAD
+=======
+
+gem "rubycritic", require: false
+>>>>>>> 3cb9af3... test(compare_triplets_spec.rb): describe score

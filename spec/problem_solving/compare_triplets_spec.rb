@@ -31,6 +31,17 @@ RSpec.describe HackerRankStudies::ProblemSolving::CompareTriplets do
         end
     end
 
+    describe '#score' do
+        it 'is [0, 0]' do
+            alice_score = [4, 6, 7]
+            bob_score = [3, 6, 10]
+
+            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_score, bob_score).score
+            expect(result).to eq([0, 0])
+        end
+    end
+
+
     describe 'compare' do
         it 'is [1, 1]' do
             alice_score = [4, 6, 7]
