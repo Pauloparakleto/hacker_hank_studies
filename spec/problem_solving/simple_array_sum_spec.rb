@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe HackerRankStudies::ProblemSolving::SimpleArraySum do
   it 'is 6' do
     array_to_sum = [1, 2, 3]

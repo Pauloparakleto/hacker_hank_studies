@@ -1,55 +1,56 @@
+# frozen_string_literal: true
+
 # The problem
 # https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true
 RSpec.describe HackerRankStudies::ProblemSolving::CompareTriplets do
-    describe 'initialize' do
-        it 'is truthy' do
-            alice_score = [4, 6, 7]
-            bob_score = [3, 6, 10]
+  describe 'initialize' do
+    it 'is truthy' do
+      alice_score = [4, 6, 7]
+      bob_score = [3, 6, 10]
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_score, bob_score)
-            expect(result).to be_truthy
-        end
+      result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_score, bob_score)
+      expect(result).to be_truthy
     end
+  end
 
-    describe '#first_scores' do
-        it 'is alice_scores' do
-            alice_scores = [4, 6, 7]
-            bob_scores = [3, 6, 10]
+  describe '#first_scores' do
+    it 'is alice_scores' do
+      alice_scores = [4, 6, 7]
+      bob_scores = [3, 6, 10]
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).first_scores
-            expect(result).to eq(alice_scores)
-        end
+      result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).first_scores
+      expect(result).to eq(alice_scores)
     end
+  end
 
-    describe '#second_scores' do
-        it 'is bob_scores' do
-            alice_scores = [4, 6, 7]
-            bob_scores = [3, 6, 10]
+  describe '#second_scores' do
+    it 'is bob_scores' do
+      alice_scores = [4, 6, 7]
+      bob_scores = [3, 6, 10]
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).second_scores
-            expect(result).to eq(bob_scores)
-        end
+      result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).second_scores
+      expect(result).to eq(bob_scores)
     end
+  end
 
-    describe '#scores' do
-        it 'is [0, 0]' do
-            alice_scores = [4, 6, 7]
-            bob_scores = [3, 6, 10]
+  describe '#scores' do
+    it 'is [0, 0]' do
+      alice_scores = [4, 6, 7]
+      bob_scores = [3, 6, 10]
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).scores
-            expect(result).to eq([0, 0])
-        end
+      result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).scores
+      expect(result).to eq([0, 0])
     end
+  end
 
+  describe 'compare' do
+    it 'is [1, 1]' do
+      alice_scores = [4, 6, 7]
+      bob_scores = [3, 6, 10]
 
-    describe 'compare' do
-        it 'is [1, 1]' do
-            alice_scores = [4, 6, 7]
-            bob_scores = [3, 6, 10]
+      result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).compare
 
-            result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).compare
-            
-            expect(result).to eq([1, 1])
-        end
+      expect(result).to eq([1, 1])
     end
+  end
 end
