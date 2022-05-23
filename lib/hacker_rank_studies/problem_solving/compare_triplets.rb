@@ -3,16 +3,20 @@ module HackerRankStudies
         # The problem
         # https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true
         class CompareTriplets
-            attr_accessor :first_score, :second_score, :score
+            attr_accessor :first_scores, :second_scores, :scores
 
-            def initialize(first_score, second_score)
-                @first_score = first_score
-                @second_score = second_score
-                @score = [0, 0]
+            def initialize(first_scores, second_scores)
+                @first_scores = first_scores
+                @second_scores = second_scores
+                @scores = [0, 0]
             end
 
             def compare
+                first_scores.each_with_index do |score, index|
+                    if score > second_scores[index]
 
+                    end
+                end
             end
         end
     end
