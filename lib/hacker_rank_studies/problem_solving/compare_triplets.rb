@@ -15,6 +15,8 @@ module HackerRankStudies
 
       def compare
         first_scores.each_with_index do |score, index|
+          next if score.eql?(second_scores[index])
+          
           scores[0] += 1 if score > second_scores[index]
 
           scores[1] += 1 if score < second_scores[index]
