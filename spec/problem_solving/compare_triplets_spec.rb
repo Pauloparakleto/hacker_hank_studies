@@ -52,5 +52,14 @@ RSpec.describe HackerRankStudies::ProblemSolving::CompareTriplets do
 
       expect(result).to eq([1, 1])
     end
+
+    it 'is [2, 1]' do
+      alice_scores = [17, 28, 30]
+      bob_scores = [99, 16, 8]
+
+      result = HackerRankStudies::ProblemSolving::CompareTriplets.new(alice_scores, bob_scores).compare
+
+      expect(result).to eq([2, 1])
+    end
   end
 end
