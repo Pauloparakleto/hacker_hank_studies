@@ -9,4 +9,10 @@ RSpec.describe HackerRankStudies::ProblemSolving::GradindStudents do
             end
         end
     end
+
+    describe '#original_grades' do
+        it 'returns original_grade as it is' do
+            expect(correct_initialize.original_grades).to eq(original_grades)
+        end
+    end
 end
