@@ -18,7 +18,7 @@ RSpec.describe HackerRankStudies::ProblemSolving::GradindStudents do
 
     describe '#final_grade' do
         it '[75, 67, 40, 33]' do
-            expect(correct_initialize.final_grade).to eq([[75, 67, 40, 33]])
+            expect(correct_initialize.final_grade).to eq([75, 67, 40, 33])
         end
     end
 
