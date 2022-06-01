@@ -14,3 +14,5 @@ gem 'rubocop', '~> 1.7'
 gem "rubycritic", require: false
 
 gem 'rubycritic', require: false
+
+gem 'pry'
