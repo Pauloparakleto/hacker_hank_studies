@@ -3,7 +3,6 @@
 module HackerRankStudies
   module ProblemSolving
     # https://www.hackerrank.com/challenges/grading/problem?isFullScreen=true
-
     class GradindStudents
       attr_accessor :original_grades
 
@@ -16,7 +15,7 @@ module HackerRankStudies
 
       def final_grade
         original_grades.map do |grade|
-          if is_grade_less_than_standard_grade(grade)
+          if grade_less_than_standard_grade(grade)
             grade
           else
             next_multiple_of5 = (grade / 10) * 10 + 5
@@ -33,7 +32,7 @@ module HackerRankStudies
         end
       end
 
-      def is_grade_less_than_standard_grade(grade)
+      def grade_less_than_standard_grade(grade)
         grade if grade < STANDARD_GRADE
       end
     end
