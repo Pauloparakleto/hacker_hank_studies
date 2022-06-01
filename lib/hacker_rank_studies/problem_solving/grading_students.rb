@@ -3,6 +3,10 @@
 module HackerRankStudies
   module ProblemSolving
     # https://www.hackerrank.com/challenges/grading/problem?isFullScreen=true
+    # the discussion about UtilityFunction reek https://github.com/troessner/reek/issues/681
+    # TODO: next release apply rubycritic, the utility function smell is just a suggestion to keep your eye opened 
+    # It is like "hey, should be better if you move this method to another class?"
+    # Any way, you need OOP principles.
     class GradindStudents
       attr_accessor :original_grades
 
