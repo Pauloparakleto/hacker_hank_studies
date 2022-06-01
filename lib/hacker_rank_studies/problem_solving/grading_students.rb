@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HackerRankStudies
   module ProblemSolving
     # https://www.hackerrank.com/challenges/grading/problem?isFullScreen=true
