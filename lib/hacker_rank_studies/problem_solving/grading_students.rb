@@ -18,17 +18,21 @@ module HackerRankStudies
           if grade_less_than_standard_grade(grade)
             grade
           else
-            next_multiple_of5 = ((grade / 10) * 10) + 5
-            rest = grade % 10
-            next_multiple_of5 += 5 if rest > 5
-
-            diff = next_multiple_of5 - grade
-            if diff < 3
-              next_multiple_of5
-            else
-              grade
-            end
+            round(grade)
           end
+        end
+      end
+
+      def round(grade)
+        next_multiple_of5 = ((grade / 10) * 10) + 5
+        rest = grade % 10
+        next_multiple_of5 += 5 if rest > 5
+
+        diff = next_multiple_of5 - grade
+        if diff < STANDARD_DIFFERENCE_BETWEEN_NEXT_MULTIPLE_OF5
+          next_multiple_of5
+        else
+          grade
         end
       end
 
