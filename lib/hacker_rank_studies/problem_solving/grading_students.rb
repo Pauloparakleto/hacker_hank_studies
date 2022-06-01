@@ -18,7 +18,7 @@ module HackerRankStudies
           if grade_less_than_standard_grade(grade)
             grade
           else
-            next_multiple_of5 = (grade / 10) * 10 + 5
+            next_multiple_of5 = ((grade / 10) * 10) + 5
             rest = grade % 10
             next_multiple_of5 += 5 if rest > 5
 
