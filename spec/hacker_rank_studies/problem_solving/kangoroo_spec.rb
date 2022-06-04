@@ -19,7 +19,7 @@ RSpec.describe HackerRankStudies::ProblemSolving::Kangoroo do
       let(:first_rate) { 2 }
       let(:second_position) { 5 }
       let(:second_rate) { 3 }
-      
+
       it 'is NO' do
         expect(described_class.new(first_position, first_rate, second_position, second_rate)
         .should_same_possition?).to eq('NO')
