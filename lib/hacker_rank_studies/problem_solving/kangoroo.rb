@@ -5,7 +5,7 @@ module HackerRankStudies
     # The problem description
     # https://www.hackerrank.com/challenges/kangaroo/problem?isFullScreen=true
     class Kangoroo
-      attr_accessor :first_position, :first_rate, :second_position, :second_rate
+      attr_reader :first_position, :first_rate, :second_position, :second_rate
 
       def initialize(first_position, first_rate, second_position, second_rate)
         @first_position = first_position
