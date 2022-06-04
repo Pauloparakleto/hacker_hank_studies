@@ -14,15 +14,28 @@ module HackerRankStudies
         @second_rate = second_rate
       end
 
-      def should_same_possition?
-        return 'NO' if second_rate.eql? first_rate
+      def same_rate?
+        second_rate.eql? first_rate
+      end
 
-        module_number_of_jumps = (first_position - second_position) % (second_rate - first_rate)
+      def number_of_jumps_positive?
         number_of_jumps = (first_position - second_position) / (second_rate - first_rate)
 
-        return 'NO' unless number_of_jumps.positive?
+        number_of_jumps.positive?
+      end
 
-        return 'NO' unless module_number_of_jumps.zero?
+      def module_number_of_jumps_zero?
+        module_number_of_jumps = (first_position - second_position) % (second_rate - first_rate)
+
+        module_number_of_jumps.zero?
+      end
+
+      def should_same_possition?
+        return 'NO' if same_rate?
+
+        return 'NO' unless number_of_jumps_positive?
+
+        return 'NO' unless module_number_of_jumps_zero?
 
         'YES'
       end
