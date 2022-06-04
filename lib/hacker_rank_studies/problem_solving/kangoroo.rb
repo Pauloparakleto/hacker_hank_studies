@@ -1,21 +1,23 @@
+# frozen_string_literal: true
+
 module HackerRankStudies
   module ProblemSolving
+    # The problem description
+    # https://www.hackerrank.com/challenges/kangaroo/problem?isFullScreen=true
     class Kangoroo
-      attr_accessor :possition_and_rate
+      attr_accessor :first_position, :first_rate, :second_position, :second_rate
 
-      def initialize(possition_and_rate)
-        @possition_and_rate = possition_and_rate
+      def initialize(first_position, first_rate, second_position, second_rate)
+        @first_position = first_position
+        @first_rate = first_rate
+        @second_position = second_position
+        @second_rate = second_rate
       end
 
       def should_same_possition?
-        first_position = possition_and_rate.first
-        first_rate = possition_and_rate[1]
-        second_position = possition_and_rate[2]
-        second_rate = possition_and_rate.last
+        return 'YES' if first_position < second_position && first_rate > second_rate
 
-        first_expected_position = (second_position * second_rate) / first_rate
-
-        return 'YES' if first_position.eql?(first_expected_position)
+        return 'YES' if first_position > second_position && first_rate < second_rate
 
         'NO'
       end
