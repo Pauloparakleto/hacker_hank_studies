@@ -11,7 +11,11 @@ gem 'rspec', '~> 3.0'
 
 gem 'rubocop', '~> 1.7'
 
-gem "rubycritic", require: false
+gem 'rubocop-rspec', require: false
+
+gem 'rubocop-performance', require: false
+
+gem 'rubycritic', require: false
 
 gem 'rubycritic', require: false
 
