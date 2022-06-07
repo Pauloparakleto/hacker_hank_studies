@@ -21,15 +21,15 @@ RSpec.describe HackerRankStudies::ProblemSolving::BirthdayBar do
   end
 
   context 'when day is 4 and month is 1' do
-    let(:day) { 3 }
-    let(:month) { 2 }
+    let(:day) { 4 }
+    let(:month) { 1 }
 
     it 'is 1' do
       chocolate_bar = [4]
 
       result = described_class.new(chocolate_bar, day, month).count_division_posibilities
 
-      expect(result).to eq(2)
+      expect(result).to eq(1)
     end
   end
 end
