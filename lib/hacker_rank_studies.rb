@@ -6,6 +6,7 @@ require_relative 'hacker_rank_studies/problem_solving/birthday_cake_candles'
 require_relative 'hacker_rank_studies/problem_solving/compare_triplets'
 require_relative 'hacker_rank_studies/problem_solving/grading_students'
 require_relative 'hacker_rank_studies/problem_solving/kangoroo'
+require_relative 'hacker_rank_studies/problem_solving/birthday_bar'
 
 module HackerRankStudies
   class Error < StandardError; end
