@@ -31,5 +31,21 @@ RSpec.describe HackerRankStudies::ProblemSolving::BirthdayBar do
 
       expect(result).to eq(1)
     end
+
+    it 'is 2' do
+      chocolate_bar = [4, 1, 4, 2, 0]
+
+      result = described_class.new(chocolate_bar, day, month).count_division_posibilities
+
+      expect(result).to eq(2)
+    end
+
+    it 'is 2' do
+      chocolate_bar = [4, -1, 4, 2, 0]
+
+      result = described_class.new(chocolate_bar, day, month).count_division_posibilities
+
+      expect(result).to eq(2)
+    end
   end
 end
