@@ -12,6 +12,9 @@ module HackerRankStudies
       end
 
       def count_division_posibilities
+        if month.eql?(1)
+          chocolate_bar.count(day)
+        end
       end
     end
   end
