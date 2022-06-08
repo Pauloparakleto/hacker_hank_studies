@@ -13,8 +13,16 @@ module HackerRankStudies
 
       def count_division_posibilities
         if month.eql?(1)
-          chocolate_bar.count(day)
+          return chocolate_bar.count(day)
         end
+
+        @counter = 0
+
+        chocolate_bar.combination(month).to_a.uniq.each do | chocolate |
+          @counter += 1 if chocolate.sum.eql?(day)
+        end
+
+        @counter
       end
     end
   end
