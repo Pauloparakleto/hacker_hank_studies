@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HackerRankStudies
   module ProblemSolving
     # Problem description
@@ -12,13 +14,11 @@ module HackerRankStudies
       end
 
       def count_division_posibilities
-        if month.eql?(1)
-          return chocolate_bar.count(day)
-        end
+        return chocolate_bar.count(day) if month.eql?(1)
 
         @counter = 0
 
-        chocolate_bar.combination(month).to_a.uniq.each do | chocolate |
+        chocolate_bar.combination(month).to_a.uniq.each do |chocolate|
           @counter += 1 if chocolate.sum.eql?(day)
         end
 
@@ -27,4 +27,3 @@ module HackerRankStudies
     end
   end
 end
-  
