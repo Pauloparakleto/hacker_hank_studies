@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe HackerRankStudies::ProblemSolving::BirthdayBar do
   context 'when day is 3 and month is 2' do
     let(:day) { 3 }
@@ -47,14 +49,6 @@ RSpec.describe HackerRankStudies::ProblemSolving::BirthdayBar do
 
     it 'is 2' do
       chocolate_bar = [4, 1, 4, 2, 0]
-
-      result = described_class.new(chocolate_bar, day, month).count_division_posibilities
-
-      expect(result).to eq(2)
-    end
-
-    it 'is 2' do
-      chocolate_bar = [4, -1, 4, 2, 0]
 
       result = described_class.new(chocolate_bar, day, month).count_division_posibilities
 
