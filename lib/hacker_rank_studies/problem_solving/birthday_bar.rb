@@ -5,6 +5,7 @@ module HackerRankStudies
     # Problem description
     # https://www.hackerrank.com/challenges/the-birthday-bar/problem?isFullScreen=true
     class BirthdayBar
+      SINGULAR_MONTH = 1
       attr_reader :chocolate_bar, :day, :month, :counter
 
       def initialize(chocolate_bar, day, month)
@@ -15,7 +16,7 @@ module HackerRankStudies
       end
 
       def count_division_posibilities
-        return chocolate_bar.count(day) if month.eql?(1)
+        return count_single_element if month.eql?(SINGULAR_MONTH)
 
         @counter = 0
 
@@ -24,6 +25,10 @@ module HackerRankStudies
         end
 
         @counter
+      end
+
+      def count_single_element
+        chocolate_bar.count(day)
       end
 
       def count_division(chocolate_bar, index)
