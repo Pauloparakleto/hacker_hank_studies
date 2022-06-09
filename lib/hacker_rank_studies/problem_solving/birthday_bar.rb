@@ -19,8 +19,10 @@ module HackerRankStudies
 
         counter = 0
 
-        chocolate_bar.combination(month).to_a.uniq.each do |chocolate|
-          counter += 1 if chocolate.sum.eql?(day)
+        chocolate_bar.each_index do |index|
+          break if (month + index) > chocolate_bar.size
+
+          counter += 1 if chocolate_bar[index...(month + index)].sum.eql?(day)
         end
 
         counter
