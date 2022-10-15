@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
+#require 'pry'
+require 'pry-byebug'
 require 'hacker_rank_studies'
-require 'pry'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
