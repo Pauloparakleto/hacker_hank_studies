@@ -27,11 +27,16 @@ RSpec.describe HackerRankStudies::ProblemSolving::BomberMan do
       end
     end
 
-    context 'when given 2 seconds' do
+    context 'when given 2 seconds without call' do
+      let(:n_seconds) { 2 }
       let(:simple_grid_fulled_of_bomb) { ['OOO', 'OOO', 'OOO'] }
 
-      it 'is equal grid fulled of bomb' do
-        expect(initialize_with_one_bomb.final_state).to eq(simple_grid_fulled_of_bomb)
+      it 'is equal one_bomb_simple_grid' do
+        expect(initialize_with_one_bomb.final_state).to eq(one_bomb_simple_grid)
+      end
+
+      it 'is not equal simple_grid_fulled_of_bomb' do
+        expect(initialize_with_one_bomb.final_state).not_to eq(simple_grid_fulled_of_bomb)
       end
     end
   end
@@ -53,6 +58,23 @@ RSpec.describe HackerRankStudies::ProblemSolving::BomberMan do
         initialize_with_one_bomb.call
 
         expect(initialize_with_one_bomb.final_state).to eq(simple_grid_fulled_of_bomb)
+      end
+
+      it 'has final_state not equal to initial_state' do
+        initialize_with_one_bomb.call
+
+        expect(initialize_with_one_bomb.final_state).not_to eq(initialize_with_one_bomb.initial_state)
+      end
+    end
+
+    context 'when given 3 seconds' do
+      let(:n_seconds) { 3 }
+      let(:simple_grid_destroy_anything_in_its_four_neighboring_cells) { ['O.O', '...', 'O.O'] }
+
+      it 'has final_state equal to simple_grid_destroy_anything_in_its_four_neighboring_cells' do
+        initialize_with_one_bomb.call
+
+        expect(initialize_with_one_bomb.final_state).to eq(simple_grid_destroy_anything_in_its_four_neighboring_cells)
       end
 
       it 'has final_state not equal to initial_state' do
