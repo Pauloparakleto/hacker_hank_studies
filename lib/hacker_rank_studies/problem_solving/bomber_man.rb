@@ -1,5 +1,6 @@
 module HackerRankStudies
   module ProblemSolving
+    # https://www.hackerrank.com/challenges/bomber-man/problem?isFullScreen=true
     class BomberMan
       attr_accessor :n_seconds, :initial_state, :final_state
 
