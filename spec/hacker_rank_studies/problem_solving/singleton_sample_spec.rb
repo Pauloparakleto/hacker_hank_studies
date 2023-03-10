@@ -8,28 +8,41 @@ RSpec.describe HackerRankStudies::ProblemSolving::SingletonSample do
   end
 
   describe "#instance" do
-    it 'returns zero objects in space' do
-      expect(ObjectSpace.each_object(described_class){}).to eql(0)
+    context 'when out of thread' do
+      it 'returns zero objects in space' do
+        expect(ObjectSpace.each_object(described_class){}).to be(0)
+      end
+
+      it 'returns described class' do
+        expect(described_class.instance).to be_an_instance_of(
+                                              HackerRankStudies::ProblemSolving::SingletonSample
+                                            )
+      end
+
+      it 'is the same exactly instance' do
+        a = described_class.instance
+        b = described_class.instance
+
+        expect(a).to eql(b)
+      end
+
+      it 'returns 1 object in space' do
+        described_class.instance
+        described_class.instance
+
+        expect(ObjectSpace.each_object(described_class){}).to be(1)
+      end
     end
 
-    it 'returns described class' do
-      expect(described_class.instance).to be_an_instance_of(
-                                            HackerRankStudies::ProblemSolving::SingletonSample
-                                          )
-    end
+    context 'when initialized in a thread' do
+      it 'returns 1 object in space' do
+        threads = []
+        threads << Thread.new { described_class.instance }
+        threads << Thread.new { described_class.instance }
+        threads.each(&:join)
 
-    it 'is the same exactly instance' do
-      a = described_class.instance
-      b = described_class.instance
-
-      expect(a).to eql(b)
-    end
-
-    it 'returns 1 object in space' do
-      described_class.instance
-      described_class.instance
-
-      expect(ObjectSpace.each_object(described_class){}).to eql(1)
+        expect(ObjectSpace.each_object(described_class){}).to be(1)
+      end
     end
   end
 
