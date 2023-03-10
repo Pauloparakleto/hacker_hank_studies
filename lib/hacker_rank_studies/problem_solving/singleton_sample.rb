@@ -7,7 +7,11 @@ module HackerRankStudies
 
       private_class_method :new
       def self.instance
-        @instance ||= new
+        return @instance if @instance
+
+        Thread::Mutex.new.synchronize do
+          @instance = new
+        end
       end
 
       def _dump(depth = -1)
