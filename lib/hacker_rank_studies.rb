@@ -8,6 +8,7 @@ require_relative 'hacker_rank_studies/problem_solving/grading_students'
 require_relative 'hacker_rank_studies/problem_solving/kangoroo'
 require_relative 'hacker_rank_studies/problem_solving/birthday_bar'
 require_relative 'hacker_rank_studies/problem_solving/car'
+require_relative 'hacker_rank_studies/problem_solving/air_plain'
 
 module HackerRankStudies
   class Error < StandardError; end
