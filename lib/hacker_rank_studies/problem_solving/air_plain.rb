@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'vehicle'
+
 module HackerRankStudies
   module ProblemSolving
     # The Design Pattern in Ruby chapter 1 topic Preffer composition over inheritance
@@ -7,14 +9,7 @@ module HackerRankStudies
     # change things isolated, relying only in inheritance has a problem since a single change
     # in super class would affect all its subclasses.
     # The example here is about a vehicle composition rather than an inheritance.
-    class AirPlain
-      def start_engine
-        'Engine started'
-      end
-
-      def stop_engine
-        'Engine stopped'
-      end
+    class AirPlain < HackerRankStudies::ProblemSolving::Vehicle
     end
   end
 end
