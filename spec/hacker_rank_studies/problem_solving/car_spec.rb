@@ -7,13 +7,21 @@
 # The example here is about a vehicle composition rather than an inheritance.
 
 RSpec.describe HackerRankStudies::ProblemSolving::Car do
-  describe 'start_engine' do
+  describe '#start_engine' do
     it 'stars engine' do
       expect(described_class.new.start_engine).to eq('Engine started')
     end
+  end
 
+  describe '#stop_engine' do
     it 'stops engine' do
       expect(described_class.new.stop_engine).to eq('Engine stopped')
+    end
+  end
+
+  describe '#sunday_drive' do
+    it 'drives and return' do
+      expect(described_class.new.sunday_drive).to eq('Drove and returned')
     end
   end
 end

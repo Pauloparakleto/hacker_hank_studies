@@ -12,6 +12,12 @@ module HackerRankStudies
         @engine = ProblemSolving::Engine.new
       end
 
+      def sunday_drive
+        start_engine
+        stop_engine
+        'Drove and returned'
+      end
+
       def start_engine
         @engine.start_engine
       end
