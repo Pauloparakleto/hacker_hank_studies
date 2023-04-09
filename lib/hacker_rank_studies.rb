@@ -10,6 +10,7 @@ require_relative 'hacker_rank_studies/problem_solving/birthday_bar'
 require_relative 'hacker_rank_studies/problem_solving/car'
 require_relative 'hacker_rank_studies/problem_solving/air_plain'
 require_relative 'hacker_rank_studies/problem_solving/vehicle'
+require_relative 'hacker_rank_studies/problem_solving/engine'
 
 module HackerRankStudies
   class Error < StandardError; end
