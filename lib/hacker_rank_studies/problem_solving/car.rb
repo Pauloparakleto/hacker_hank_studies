@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'vehicle'
-
 module HackerRankStudies
   module ProblemSolving
     # The Design Pattern in Ruby chapter 1 topic Preffer composition over inheritance
