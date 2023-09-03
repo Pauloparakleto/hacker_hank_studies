@@ -17,6 +17,4 @@ gem 'rubocop-performance', require: false
 
 gem 'rubycritic', require: false
 
-gem 'rubycritic', require: false
-
 gem 'pry'
